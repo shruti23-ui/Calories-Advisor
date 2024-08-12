@@ -7,6 +7,9 @@ from PIL import Image
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+# Define the model as gemini-1.5-pro
+model = genai.GenerativeModel('gemini-1.5-pro')
+
 def get_gemini_response(input_prompt, image, portion_size=None):
     # Adjust input based on whether portion size is provided
     if portion_size:
