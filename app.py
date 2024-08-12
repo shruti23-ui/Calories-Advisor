@@ -40,10 +40,22 @@ submit=st.button("Tell me about the total calories")
 input_prompt="""
 You are an expert in nutritionist where you need to see the food items from the image
 and calculate the total calories,also provide the details of every food items with calories intake in below format
+Discuss possible ingredients, suggest general calorie content if possible, and provide advice on the overall healthiness of the food. 
+If exact calculations are not feasible, share general tips for estimating calorie content and nutritional balance.
 1. Item 1- no. of calories
 2. Item 2- no. of calories
 ----
 ----
+
+You are a nutrition expert analyzing the contents of the provided image. Based on the visible elements:
+1. Discuss possible ingredients and provide general calorie content estimates if feasible and if it seems impossible to tell just by the image don't give the repsonse like that.Response should be possible and optimistic only
+2. Offer advice on the overall healthiness of the food.
+3. If exact calculations are not possible, suggest general tips for estimating calorie content and achieving a balanced diet.
+4. List possible items and their calorie estimates if recognizable.
+5. Don't mention what you cannot tell
+
+Provide insights on carbohydrates, vitamins, fats, fibers, sugars, and other key nutrients.
+
 Finally you can also mention whether the food is healthy or not and also mention the
 percentage split of the ratio of carbohydrates,vitamins,fats,fibres,sugars and other important things in our diet
 
